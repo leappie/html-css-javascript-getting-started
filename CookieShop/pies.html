@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+
+  </style>
+  <!-- type attribute important, tells the browser it is reading css -->
+  <link rel="stylesheet" href="site.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pies | Bethany's Pie Shop</title>
+</head>
+<body>
+  <!-- header>nav>ul>li*3>a
+  header: tells html this will be the header
+  nav: navigation element for links that apply just for the site
+  ul: unordered list item
+  li: list item
+  a: anchor for a link-->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="pies.html">Pies</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- 
+    Note: main signals to a search engine that this is the primary content
+    for the page. And header signals it is the header etc.
+    Main is the most cared about. The aside element is more for side 
+    pictures like in an article. 
+   -->
+  <main>
+    <!-- alt element lets search engines know what this image is about -->
+    <aside><img src="../images/logo.png" alt="Bethany's Pie Shop"></aside>
+    <article>
+        <h1>Pies</h1>
+        <section class="columns-desktop">
+            <div class="pie">
+                <img src="../images/apple-pie.png" alt="Apple Pie">
+                <div class="columns">
+                    <div class="title">Apple Pie</div>
+                    <div class="price">$12.95</div>
+                </div>
+                <p class="desc">Our famous apple pie</p>
+                <button data-order="apple-pie">Order</button>
+            </div>
+            <div class="pie">
+                <img src="../images/cherry-pie.png" alt="Cherry Pie">
+                <div class="columns">
+                    <div class="title">Cherry Pie</div>
+                    <div class="price">$15.95</div>
+                </div>
+                <p class="desc">A summer classic!</p>
+                <!-- data order gives extra info about the element. You van call 
+                this data order to see what people have ordered -->
+                <button data-order="cherry-pie">Order</button>
+            </div>
+        </section>
+    </article>
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="pies.html">Pies</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

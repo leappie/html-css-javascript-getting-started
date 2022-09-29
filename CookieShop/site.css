@@ -96,6 +96,10 @@ article {
     width: 75%;
 }
 
+.columns {
+    display: flex;
+}
+
 @media screen and (min-width: 768px) {
     main {
         display: flex;
@@ -104,4 +108,50 @@ article {
     aside {
         margin-left: 2%;
     }
+
+    .columns-desktop {
+        display: flex;
+    }
 }
+
+/* Style for pies */
+.pie {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border: solid 1px #ccc;
+}
+
+/* Note when you target an element inside another element you use
+el1 > el2. When you target an attribute inside another element or 
+attribute you use:
+el1 attr or attr1 attr2. */
+.pie img {
+    width: 100%;
+}
+
+.pie .title {
+    font-weight: bold;
+}
+
+.pie .columns {
+    width: 100%;
+}
+
+.pie .price {
+    text-align: right;
+}
+
+.pie .columns div {
+    width: 50%;
+}
+
+.pie button {
+    background-color: #f6aeae;
+    padding: 10px;
+    border: solid 1px #e67b7d;
+    border-radius: 3px;
+    color: #fff;
+}
+
