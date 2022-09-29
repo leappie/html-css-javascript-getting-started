@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* To target only mobile devices hide 
+        desktop and print elements.
+        So this will be runned first unless the media
+        selectors below override this.*/
+        .desktop, .print {
+            display: none;
+        }
+
+        /* Media when the page is printed
+        hide dekstop and mobile*/
+        @media print {
+            .desktop, .mobile {
+            display: none;
+            }
+            
+            /* shows this element when we print the page 
+            use cntrl + p to test*/
+            .print {
+                display: block;
+            }
+        }
+        
+        /* media selector with additional property */
+        @media screen and (min-width: 768px) {
+            /* .print is already on none */
+            .mobile {
+                display: none;
+            }
+
+            .desktop {
+                display: block;
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Element meta with name viewport is requiered to let 
+        the device know how to interpret the width-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Media queries allow you to target differnt devices.
+        When you want to target different devices. Always desing 
+        for mobile devices first.
+        Forces you to make sure your layout works in smaller 
+        dimenions before larger ones.
+     -->
+    <div class="desktop">Desktop</div>
+    <div class="mobile">Mobile</div>
+    <div class="print">Print</div>
+</body>
+</html>

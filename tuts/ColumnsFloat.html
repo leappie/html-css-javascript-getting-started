@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .columns {
+            width: 100%;
+            border: solid 1px #ccc;
+        }
+        /* 
+        Note: using this method to create columns will result in
+        empty space on the right of the last column
+         */
+        .columns > div {
+            width: 49%;
+            border: solid 1px #ddd;
+            float: left;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="columns">
+        <div>Column 1</div>
+        <div>Column 1</div>
+    </div>
+</body>
+</html>

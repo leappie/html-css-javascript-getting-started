@@ -1,0 +1,107 @@
+/* Some elements like title have default margin an padding 
+in their styles. Resetting all elements will remove this. This is 
+done by the star selector: * . */
+
+* {
+    margin: 0;
+}
+
+/* Rules to make sure the dimensions of a page are calculated 
+correctly. This helps other styles to calculate their position on the
+page correctly. */
+html, 
+body {
+    height: 100%;
+}
+
+/* This color is inheritated by all elements unless we change it on 
+local level. */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #999;
+}
+
+/* Adds top and bottom margin to each paragraph in the website */
+p {
+    margin: 0.05em 0 .05em 0;
+}
+
+/* A fixed position makes the header stay in place */
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #a493c0;
+    padding: 10px;
+}
+
+/* Target the links in the nav element. Text-decoration to none will 
+remove underlines. Furthermore when the links are visited or not it will
+always have the same color. */
+nav a:visited,
+nav a:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* Removes the list bullet points. */
+nav > ul {
+    display: inline;
+    padding: 0;
+}
+
+/* Note list items als headers makes it easier for the search engine to
+recognize it. */
+
+/* Display inline block stacks the elments next to each other. Inline-block 
+gives still control over things like width margin unlike inline.
+List style none tells the browser to not interpret it as a list item.*/
+nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+/* The background images is going to repeat itself till it has filled
+the page. You can center it and set it to no repeat. */
+main {
+    display: block;
+    background-image: url("../images/background.png");
+    padding-top: 3em;
+    padding-bottom: 3em;
+     /* Min height to make sure the footer is at the bottom of the page*/ 
+    min-height: 85%;
+}
+
+footer {
+    padding: 15px;
+}
+
+/* Em unit creates site based on current font size. Specially useful
+when you zoom in and zoom out. The padding will change dynamically.*/
+aside,
+article {
+    padding: 2em;
+}
+
+/* Align the image in the center */
+aside {
+    text-align: center;
+}
+
+
+article {
+    width: 75%;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: flex;
+    }
+
+    aside {
+        margin-left: 2%;
+    }
+}

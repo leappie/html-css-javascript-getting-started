@@ -1,0 +1,4 @@
+- https://validator.w3.org/ -> To validate HTML
+- https://jigsaw.w3.org/css-validator/ -> To validate css
+- https://caniuse.com/ -> To check which elements are supported by different browsers
+
