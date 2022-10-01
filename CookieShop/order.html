@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- type attribute important, tells the browser it is reading css -->
+    <link rel="stylesheet" href="site.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bethany's Pie Shop</title>
+</head>
+
+<body>
+    <!-- header>nav>ul>li*3>a
+  header: tells html this will be the header
+  nav: navigation element for links that apply just for the site
+  ul: unordered list item
+  li: list item
+  a: anchor for a link-->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 
+    Note: main signals to a search engine that this is the primary content
+    for the page. And header signals it is the header etc.
+    Main is the most cared about. The aside element is more for side 
+    pictures like in an article. 
+   -->
+    <main>
+        <!-- alt element lets search engines know what this image is about -->
+        <aside><img src="../images/logo.png" alt="Bethany's Pie Shop"></aside>
+        <article>
+            <h1>Order</h1>
+            <form action="https://localhost:7071/api/post" method="post">
+                <div class="input-group">
+                    <!-- By puttin the same value in 'for' that is 
+                    used by the input id element. It will put your cursor inside
+                    the textbox when you click on the text First name. -->
+                    <div><label for="first-name">First name</label></div>
+                    <div><input type="text" name="first-name" id="first-name"></div>
+                </div>
+
+
+                <div class="input-group">
+                    <div><label for="last-name">Last name</label></div>
+                    <div><input type="text" name="last-name" id="last-name"></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="address">Address</label></div>
+                    <div><input type="text" name="address" id="address"></div>
+                </div>
+
+                <!-- Drop down menu to choose from US states -->
+                <div class="input-group">
+                    <div><label for="state">State</label>
+                        <div>
+                            <select name="state" id="state">
+                                <option value="" selected>[ Select one ]</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Alaska">Alaska</option>
+                                <option value="Arizona">Arizona</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="postal-code">Postal code</label></div>
+                    <div><input type="text" name="postal-code" id="postal-code"></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="comments">Comments</label></div>
+                    <div>
+                        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <input type="reset" value="Reset">
+                <input type="submit" value="submit">
+            </form>
+        </article>
+    </main>
+    <footer>F
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

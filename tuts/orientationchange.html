@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.addEventListener("orientationchange", _ => {
+            let screen = window.screen;
+            let angle = screen.orientation.angle;
+            let type = screen.orientation.type
+
+            console.log(`angle: ${angle}, type ${type}`)
+
+            /*
+            FALLBACK
+            A fallback is used when the native API you are using is not supported
+            by a browser. As an alternative to an API.
+
+            POLYFILL
+            Is meant to mymic built in browser functionality by using built in 
+            features. 
+
+            HTML5PLEASE
+            html5please check whether an API is supported.
+
+
+
+            */
+        });
+    </script>
+    
+</body>
+</html>
